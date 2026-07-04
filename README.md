@@ -48,7 +48,8 @@ python 01_data_collection.py
 python 02_feature_engineering.py
 python 03_model_training.py
 python 04_visualization.py
-Scientific Context & References
+
+### Scientific Context & References
 ChEMBL Database: Gaulton, A. et al. ChEMBL: a large-scale bioactivity database for drug discovery. Nucleic Acids Research, 40(D1), D1100-D1107 (2012).
 
 RDKit: Open-source chemoinformatics software toolkit (https://www.rdkit.org).
