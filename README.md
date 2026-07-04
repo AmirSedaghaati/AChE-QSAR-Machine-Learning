@@ -1,4 +1,4 @@
-<img width="1280" height="768" alt="image" src="https://github.com/user-attachments/assets/195492b3-c06c-4330-844f-d89d0be82d9e" /># AChE Inhibitor QSAR Machine Learning Pipeline
+# AChE Inhibitor QSAR Machine Learning Pipeline
 
 *Disclaimer: This is an independent portfolio project and is not connected to published research.*
 
