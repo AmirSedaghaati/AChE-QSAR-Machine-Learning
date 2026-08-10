@@ -19,9 +19,6 @@ The pipeline automates data retrieval, molecular feature engineering, robust reg
 ---
 
 ## Model Performance Results
-
-The trained Random Forest model demonstrated strong predictive capabilities on the unseen test dataset:
-
 The trained Random Forest model demonstrated strong predictive capabilities on the unseen test dataset:
 
 * **Total Checked Compounds:** 8,790 molecules
