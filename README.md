@@ -4,7 +4,7 @@
 
 This repository contains a comprehensive, end-to-end Machine Learning and Chemoinformatics pipeline designed to predict the bioactivity (pIC50) of chemical compounds targeting **Acetylcholinesterase (AChE)**. AChE is a primary therapeutic target for developing treatments against Alzheimer's disease.
 
-The pipeline automates data retrieval, molecular feature engineering, robust regression modeling, and statistical evaluation.
+The pipeline automates data retrieval, molecular feature engineering, regression modeling, and statistical evaluation.
 
 ---
 
