@@ -2,7 +2,7 @@
 
 *Disclaimer: This is an independent portfolio project and is not connected to published research.*
 
-This repository contains a comprehensive, end-to-end Machine Learning and Chemoinformatics pipeline designed to predict the bioactivity (pIC50) of chemical compounds targeting **Acetylcholinesterase (AChE)**. AChE is a primary therapeutic target for developing treatments against Alzheimer's disease.
+This repository contains a comprehensive, end-to-end Machine Learning and Chemoinformatics pipeline designed to predict the bioactivity (pIC50) of chemical compounds targeting **Acetylcholinesterase (AChE)**. AChE is an important molecular target in Alzheimer's disease research and is widely investigated in medicinal chemistry and drug discovery.
 
 The pipeline automates data retrieval, molecular feature engineering, regression modeling, and statistical evaluation.
 
@@ -13,7 +13,7 @@ The pipeline automates data retrieval, molecular feature engineering, regression
 1. **Data Collection**: Automated extraction of bioactivity data (IC50) for Human Acetylcholinesterase (`CHEMBL220`) from the ChEMBL database using the official web resource client.
 2. **Data Preprocessing**: Stricter data filtering, conversion of standard string values to floats, dropping missing columns, and transforming IC50 values into a standardized logarithmic scale (pIC50 = -log10(IC50)).
 3. **Feature Engineering**: Conversion of canonical SMILES strings into 2048-bit Morgan Fingerprints (radius = 2) utilizing RDKit to represent molecular structures numerically. 
-4. **Model Training**: Implementation of a Random Forest Regressor (n_estimators=100) trained on an 80/20 train/test split.
+4. **Model Training**: Implementation of a Random Forest Regressor (n_estimators=100) using an 80/20 train/test split.
 5. **Evaluation & Visualization**: Performance tracking via R2 and RMSE metrics, backed by high-resolution scatter plots comparing experimental vs. predicted values.
 6. **PyTorch Comparison**: A feedforward neural network (2 hidden layers, dropout) trained on the identical fingerprint features and train/test split, for a direct, fair comparison against the Random Forest baseline.
    
@@ -22,8 +22,8 @@ The pipeline automates data retrieval, molecular feature engineering, regression
 ## Model Performance Results
 The trained Random Forest model demonstrated strong predictive capabilities on the unseen test dataset:
 
-* **Total Checked Compounds:** 8,790 molecules
-* **Dataset Structure:** 2,050 total columns
+* **Dataset Size:** 8,790 compounds
+* * **Dataset Structure:** 2,050 total columns
   * **Features:** 2,048 Morgan fingerprint bits (used for training)
   * **Identifier:** 1 column (`molecule_chembl_id`)
   * **Target:** 1 column (`pIC50`)
@@ -32,7 +32,7 @@ The trained Random Forest model demonstrated strong predictive capabilities on t
 
 ## Limitations & Next Steps
 
-This is a Foundation-level applied ML result, not a fully tuned production model:
+This project represents a baseline QSAR machine learning workflow rather than a fully optimized predictive model:
 - Single algorithm (Random Forest) — no comparison against alternative regressors
 - Default hyperparameters — no tuning performed
 - Single 80/20 train/test split — no cross-validation
@@ -47,9 +47,9 @@ A PyTorch feedforward neural network was trained on the exact same 2048-bit fing
 | Model | R² | RMSE |
 |---|---|---|
 | Random Forest | 0.722 | 0.815 |
-| PyTorch NN | *(see `pytorch_predictions.csv` after running)* | *(see `pytorch_predictions.csv`)* |
+| PyTorch NN | *( 0.710 | 0.832 |
 
-Neural networks typically need more than ~8,800 training compounds to reliably outperform tree-based models on tabular fingerprint data — whichever way this comparison lands is a legitimate, defensible finding, not a failure of either approach.
+The Random Forest model slightly outperformed the PyTorch neural network on the held-out test set. This result provides a useful baseline comparison for tabular molecular fingerprint data rather than indicating a failure of the neural network approach.
 
 ![PyTorch Predicted vs Experimental](pytorch_scatter_plot.png)
 ![Training Loss Curve](pytorch_loss_curve.png)
