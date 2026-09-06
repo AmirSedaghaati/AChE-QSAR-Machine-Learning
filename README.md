@@ -47,7 +47,7 @@ A PyTorch feedforward neural network was trained on the exact same 2048-bit fing
 | Model | R² | RMSE |
 |---|---|---|
 | Random Forest | 0.722 | 0.815 |
-| PyTorch NN | *( 0.710 | 0.832 |
+| PyTorch NN | 0.710 | 0.832 |
 
 The Random Forest model slightly outperformed the PyTorch neural network on the held-out test set. This result provides a useful baseline comparison for tabular molecular fingerprint data rather than indicating a failure of the neural network approach.
 
