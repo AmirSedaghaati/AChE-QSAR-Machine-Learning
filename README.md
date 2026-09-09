@@ -23,7 +23,7 @@ The pipeline automates data retrieval, molecular feature engineering, regression
 The trained Random Forest model demonstrated strong predictive capabilities on the unseen test dataset:
 
 * **Dataset Size:** 8,790 compounds
-* * **Dataset Structure:** 2,050 total columns
+* **Dataset Structure:** 2,050 total columns
   * **Features:** 2,048 Morgan fingerprint bits (used for training)
   * **Identifier:** 1 column (`molecule_chembl_id`)
   * **Target:** 1 column (`pIC50`)
